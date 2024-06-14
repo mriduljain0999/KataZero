@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+.container{         
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}            
+nav{
+    background-color: rgb(46, 7, 46);
+    padding: 8px 8px;
+}
+nav h2{
+    color: white;
+    font-size: 25px;
+    font-weight: 400;
+}
+main{
+    width: 65vw;
+    height: auto;
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    gap: 50px;
+    position: relative;
+}
+.left{
+    display: grid;
+    grid-template-rows: repeat(3,10vw);
+    grid-template-columns: repeat(3,10vw);
+}
+.box{
+    border: 1.5px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.box:hover{
+    background-color: rgb(200, 240, 253);
+}
+.box span{
+    font-size: 7vw;
+}
+.bl{
+    border-left: none;
+}
+.br{
+    border-right: none;
+}
+.bb{
+    border-bottom: none;
+}
+.bt{
+    border-top: none;
+}
+.right h3{
+    font-weight: 600;
+}
+button{
+    background-color: rgb(170, 200, 259);
+    padding: 1px 5px;
+    border-radius: 50px;
+    border: 1px solid black;
+    cursor: pointer;
+    box-shadow: 1px 1px 4px;
+}
+button:active{
+    animation-name: button-ani;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+}
+@keyframes button-ani {
+    1%{
+        box-shadow: none;
+    }
+    100%{
+        box-shadow: 1px 1px 4px;;
+    }
+}
+img{
+    opacity: 0;
+}
+.line{
+    position: absolute;
+    width: 0;
+    height: 5px;
+    background-color: rgb(91, 1, 91);
+    opacity: 0;
+    transition: all ease .5s;
+}
+.first{
+    left: 2vw;
+    top: 5vw;
+    width: 25vw;
+}
+.second{
+    left: 2vw;
+    top: 15vw;
+    width: 25vw;
+}
+.third{
+    left: 2vw;
+    top: 25vw;
+    width: 25vw;
+}
+.fourth{
+    transform: rotate(90deg);
+    top: 15vw;
+    left: -7.5vw;
+    width: 25vw;
+}
+.fifth{
+    transform: rotate(90deg);
+    top: 15vw;
+    left: 2.5vw;
+    width: 25vw;
+}
+.sixth{
+    transform: rotate(90deg);
+    top: 15vw;
+    left: 12.5vw;
+    width: 25vw;
+}
+.seventh{
+    transform: rotate(45deg);
+    top: 15vw;
+    width:30vw
+}
+.eighth{
+    transform: rotate(135deg);
+    bottom: 15vw;
+    width:30vw
+}
+@media only screen and (max-width: 800px) {
+    main{
+        flex-direction: column;
+    }
+    .right{
+        width: 60%;
+
+    }
+    .right h3{
+        font-size: 15px;
+    }
+    .eighth{
+        bottom: 93vw;
+    }
+}
